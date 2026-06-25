@@ -1,0 +1,16 @@
+[package]
+name = "appleid20821/my-vless-gateway"
+version = "0.1.0"
+description = "VLESS Python Gateway on Wasmer Edge"
+
+[[modules]]
+name = "server"
+source = "main.py"
+engine = "interpreter"
+
+[[apps]]
+name = "my-vless-app"
+module = "server"
+
+[apps.vhost]
+path = "/"
